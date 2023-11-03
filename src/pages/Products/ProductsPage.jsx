@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 
 function ProductsPage(props) {
@@ -14,14 +15,14 @@ function ProductsPage(props) {
             <li key={index}>
               <h3>{product.name}</h3>
               <p>£{product.price}</p>
+              <p>{product.type}</p>
               <Link to={`/products/${product.id}`} state={{ product }}>
                 View Product
               </Link>
-              {/*
-                TODO: Add a link to the edit page here
-                Pass the product data as state in the link, just
-                like we are doing for the view product link above
-              */}
+              <br />
+              <Link to={`/products/${product.id}/edit`}
+              state={{ product }}> EDIT
+              </Link>
             </li>
           );
         })}
