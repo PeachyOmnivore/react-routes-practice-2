@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function AppsPage(props) {
   console.log("Inside AppsPage: ", { props });
 

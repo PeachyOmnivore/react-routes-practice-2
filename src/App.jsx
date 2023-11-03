@@ -8,8 +8,8 @@ import EditProductPage from './pages/EditProduct/EditProduct.jsx';
 import './App.css'
 
 export default function App() {
-  const [products, setProducts] = useState(productsData);
-  const [apps, setApps] = useState(appsData);
+  const [products] = useState(productsData);
+  const [apps] = useState(appsData);
 
   console.log({ products, apps });
 
